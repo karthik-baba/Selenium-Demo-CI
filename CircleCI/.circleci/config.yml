@@ -1,6 +1,7 @@
 version: 2
 jobs:
   build:
+    working_directory: ~/Selenium-Demo
     docker:
       - image: circleci/ubuntu-14.04-XXL-1327-3401d20
     steps:

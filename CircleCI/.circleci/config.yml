@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ubuntu-14.04-XXL-1327-3401d20
+    steps:
+      - run: sudo apt-get install
+      - run: sudo apt-get install maven
+      - checkout      
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
